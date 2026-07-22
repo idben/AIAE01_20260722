@@ -10,3 +10,31 @@ qty_by_name = orders_df.groupby("飲料")["數量"].sum()
 print(qty_by_name, "\n")
 sales_by_name = orders_df.groupby("飲料")["小計"].sum()
 print(sales_by_name, "\n")
+
+# groupby 的統計資料型別是 Series
+sales_by_name_df = (
+    orders_df
+    .groupby("飲料")["小計"]
+    .sum()
+    .reset_index()
+)
+
+sales_by_name_df = sales_by_name_df.rename(columns={"小計": "總銷售額"})
+print(sales_by_name_df, "\n")
+
+avg_qty_df = (
+    orders_df
+    .groupby("飲料")["數量"]
+    .mean()
+    .reset_index()
+)
+print(avg_qty_df, "\n")
+
+order_count_df = (
+    orders_df
+    .groupby("飲料")["訂單編號"]
+    .count()
+    .reset_index()
+)
+order_count_df = order_count_df.rename(columns={"訂單編號": "訂單筆數"})
+print(order_count_df, "\n")

@@ -22,3 +22,9 @@ print(clubs_df.isna().sum(), "\n")
 # 缺失值處理1: 刪除該筆資料
 clean1_df = clubs_df.dropna(subset=["社團", "是否繳費"])
 print(clean1_df, "\n")
+
+# 缺失值處理2: 補值
+result1_df = clubs_df.copy()
+result1_df["是否繳費"] = result1_df["是否繳費"].fillna(False)
+result1_df["社團"] = result1_df["社團"].fillna("未選社團")
+print(result1_df, "\n")

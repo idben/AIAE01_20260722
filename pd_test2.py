@@ -38,3 +38,19 @@ order_count_df = (
 )
 order_count_df = order_count_df.rename(columns={"訂單編號": "訂單筆數"})
 print(order_count_df, "\n")
+
+# 一次看多種統計方法
+summary_df = (
+    orders_df
+    .groupby("飲料")
+    .agg(
+        總數量=("數量", "sum"),
+        平均數量=("數量", "mean"),
+        訂單筆數=("訂單編號", "count"),
+        總銷售額=("小計", "sum"),
+    )
+    .reset_index()
+)
+print(summary_df, "\n")
+
+# 練習 1

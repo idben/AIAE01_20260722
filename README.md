@@ -2,6 +2,7 @@
 * [電子版講義網址](https://doc.sagedaben.com/AIAE01)
 * [今天的程式碼網址](https://github.com/idben/AIAE01_20260722)
 * [資料處理與分析中預計的練習作業](https://drive.google.com/drive/folders/1DobiNG7YAwtd5b7w_KPVZheQwMFbHIVW?usp=sharing)
+* [解答](https://drive.google.com/drive/folders/1JngDvLrAppGulmyzptsy9gJdICT1nH7c?usp=sharing)
 
 ## 注意事項
 * 操作練習有增加兩個單元，同學放學後記得更新
